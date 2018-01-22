@@ -8,9 +8,7 @@ module.exports = class extends Generator {
     // Have Yeoman greet the user.
     this.log(
       yosay(
-        'Welcome to the splendid ' +
-          chalk.red('generator-terraform-filestructure') +
-          ' generator!'
+        'Welcome to the ' + chalk.red('generator-terraform-filestructure') + ' generator!'
       )
     );
 
@@ -31,8 +29,8 @@ module.exports = class extends Generator {
 
   writing() {
     this.fs.copy(
-      this.templatePath('dummyfile.txt'),
-      this.destinationPath('dummyfile.txt')
+      this.templatePath('/aws/stage/vpc/vr.tf'),
+      this.destinationPath('/aws/stage/vpc/vr.tf')
     );
   }
 
